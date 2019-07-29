@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="viewSearch.jsp" method="post">
+
+<table>
+<tr>
+<th>SOURCE</th>
+<td>
+<select name="source">
+<option value="KOLKATA">KOLKATA</option>
+<option value="DELHI">DELHI </option>
+<option value="MUMBAI">MUMBAI</option>
+<option value="BANGALORE">BANGALORE</option>
+<option value="NAGPUR">NAGPUR</option>
+<option value="CHENNAI">CHENNAI</option>
+<option value="PUNE">PUNE</option>
+<option value="DURGAPUR">DURGAPUR</option>
+</select></td>
+</tr>
+<tr>
+<th>DESTINATION</th>
+<td>
+<select name="destination">
+<option value="DURGAPUR">DURGAPUR</option>
+<option value="KOLKATA">KOLKATA</option>
+<option value="DELHI">DELHI</option>
+<option value="MUMBAI">MUMBAI</option>
+<option value="BANGALORE">BANGALORE</option>
+<option value="NAGPUR">NAGPUR</option>
+<option value="CHENNAI">CHENNAI</option>
+<option value="PUNE">PUNE</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>DATE</th>
+<td>
+<input type="date" name="date">
+</td>
+</tr>
+
+<tr><th>PASSENGERS</th>
+<td><input type="number" name=passengers></td>
+</tr>
+
+
+<tr><td><input type="submit" value="SEARCH FLIGHT"></td>
+</tr>
+</table>
+</form>
+<form action="Running_status" method="post">
+<input type="submit" value="VIEW TODAYS RUNNING FLIGHT STATUS">
+</form>
+
+<form action="Flight_id_Search" method="post">
+<input type="text" name="fid">
+<input type="submit" value="SEARCH BY FLIGHT NO.">
+</form>
+</body>
+</html>
