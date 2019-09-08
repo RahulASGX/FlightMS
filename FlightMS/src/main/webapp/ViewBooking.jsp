@@ -28,7 +28,7 @@
         <th class="textcolor">SEAT TYPE 2</th>
         <th class="textcolor">MEAL TYPE</th>  
         <th class="textcolor">ANY SPECIAL REQUIREMENT</th>
-        <th class="textcolor">PAYMENT STATUS</th>
+        <th class="textcolor">RESERVATION STATUS</th>
         <th class="textcolor">CLASS</th>
       </tr>
     </thead>
@@ -60,37 +60,37 @@
     <td><%=session.getAttribute("seattypetwo"+j)  %></td>
     <td><%=session.getAttribute("mealtype"+j) %></td>
     <td><%=session.getAttribute("special_requirement"+j )%></td>
-    <td><%=session.getAttribute("payment_status"+j)  %></td>
+    <td><%=session.getAttribute("reservation_status"+j)  %></td>
     <td><%=session.getAttribute("class")  %></td>
 	</tr>
 	<%//System.out.println(session.getAttribute("f_name"+i)+" "+session.getAttribute("age"+i)); %>
     <%} %>
     
+    
+    
+    
       <tr>
     <td>
-    <form action="Pay" method="post">
+    <form action="ViewBooking2.jsp" method="post">
 <!--  <select name="class"><option value="0">SELECT CLASS</option> <option value="business">BUSINESS</option> <option value="economy">ECONOMY</option></select>   
    -->
-   <tr><td><input type="text" name="cardnumber" placeholder="Card Number"></td></tr><br/><br/>
-   <tr><td><input type="text" name="expirymonth" placeholder="Expiry Month"></td></tr>
-   <tr><td><input type="text" name="cvv" placeholder="CVV"></td></tr>
-   <tr><td><input type="hidden" name="trid" value="<%=session.getAttribute("trid")%>"></td></tr>
+   <input type="hidden" name="trid" value=<%=session.getAttribute("trid")%>>
     </td>
     
-    <tr><td><input type="submit" value="PAY NOW"></td></tr> </form>
+    <tr><td><input type="submit" value="BOOK NOW"></td></tr> </form>
 </tr>
-<%if(!session.getAttribute("userid").equals(null)){ %>
-<tr><form action="customerhome.jsp" method="post">
+ <tr>
+    <td>
+    <form action="homepage.html" method="post">
+<!--  <select name="class"><option value="0">SELECT CLASS</option> <option value="business">BUSINESS</option> <option value="economy">ECONOMY</option></select>   
+   -->
+   
+    </td>
+    
+    <tr><td><input type="submit" value="HOME"></td></tr> </form>
+</tr>
 
-    
-    <tr><td><input type="submit" value="PAY LATER"></td></tr> </form></tr> <%} %>
-    
-    <%  if(session.getAttribute("userid").equals(null)) { %>
-    <tr><form action="homepage.html" method="post">
 
-    
-    <tr><td><input type="submit" value="PAY LATER"></td></tr> </form></tr> <%} %>
-    
 </tbody></table>
 </div>
 </div>
